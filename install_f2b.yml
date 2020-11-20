@@ -1,6 +1,6 @@
 ---
 
-- hosts: rpi
+- hosts: all
   become: true
   tasks:
 
