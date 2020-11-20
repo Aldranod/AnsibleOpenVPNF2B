@@ -4,14 +4,11 @@
   become: true
   tasks:
 
-  - name: update repository index
-    apt:
-      update_cache: yes
- 
   - name: install fail2ban package
-    apt:
+    package:
       name: fail2ban
       state: latest
+      update_cache: yes
   
   - name: setup filter configuration file
     copy:
